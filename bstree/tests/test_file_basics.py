@@ -8,10 +8,10 @@ class FileBasicsTestCase(unittest.TestCase):
     FILE_NAME = FILE_PATH + '/FileBasicsTestCase.bin'.lower()
 
     def setUp(self):
-        self.f = open(self.FILE_NAME, 'wb')
+        self._file = open(self.FILE_NAME, 'wb')
     
     def tearDown(self):
-        self.f.close()
+        self._file.close()
         os.remove(self.FILE_NAME)
     
     def test_can_create_a_fili(self):
